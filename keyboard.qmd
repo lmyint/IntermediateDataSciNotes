@@ -1,0 +1,99 @@
+# Keyboard shortcuts and navigation
+
+An underappreciated but powerful aspect of your work as a data science is being adept with your keyboard. This includes knowing useful **keyboard shortcuts** and being able to **do stuff with your cursor without touching your mouse**.
+
+Why am I asking you to learn these? Two reasons!
+
+- Main and most important reason! I sincerely believe that you will feel **super cool** when you use them.
+- In terms of utility: Being able to use keyboard shortcuts and mouseless navigation saves a lot of time. [This article](https://www.brainscape.com/academy/keyboard-shortcuts-revive-economy) estimates that shortcuts could save 64 hours per year. (Note: I don't necessarily espouse the article's view on translating that saved time to more productivity. I just want you to be able to save time not doing things that take more time than they need to--like using your mouse to move your cursor.)
+
+
+
+## Navigating your cursor with the keyboard
+
+Instead of pointing and clicking where you want your mouse to go, you can use keyboard 
+
+### Navigating around words and letters
+
+"Words" refer to a string of characters buffered before and after by a space (and sometimes other separating characters like a dash.) 
+
+| Action                                     | Windows <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" width="15" height="15" alt="Windows free icon">             | Mac <img src="   https://cdn-icons-png.flaticon.com/512/0/747.png " width="15" height="15" alt="Apple free icon">                   |
+|:----------------------------------------|:----------------------|:----------------------|
+| Move cursor to the beginning/end of a word  | `Ctrl+Left/Right`           | `Option+Left/Right`         |
+| Delete previous word                    | `Ctrl+Backspace`      | `Option+Delete`       |
+| Delete next word                        | `Ctrl+Delete`         | `Option+Fn+Delete`    |
+| Highlight previous/next word                 | `Ctrl+Shift+Left/Right`     | `Option+Shift+Left/Right`   |
+| Highlight previous/next letter                 | `Shift+Left/Right`     | `Shift+Left/Right`   |
+
+Sometimes it is actually faster to use your mouse. (e.g., If you want to move your cursor to the middle of a line with many words, using a keyboard shortcut would require holding Ctrl/Option+Left or Right for a few seconds, which is probably slower than using your mouse.)
+
+### Navigating around lines
+
+| Action                                     | Windows <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" width="15" height="15" alt="Windows free icon">             | Mac <img src="   https://cdn-icons-png.flaticon.com/512/0/747.png " width="15" height="15" alt="Apple free icon">                   |
+|:-------------------------------------------|:---------------------|:-----------------------|
+| Move cursor to the beginning/end of a line     | `Alt+Left/Right`           | `Command+Left/Right`         |
+| Delete from cursor to beginning of line    | `Alt+Backspace`      | `Command+Delete`       |
+| Delete from cursor to end of line          | `Alt+Delete`         | `Command+Fn+Delete`    |
+| Select from cursor to beginning/end of line    | `Alt+Shift+Left/Right`     | `Command+Shift+Left/Right`   |
+| Select from cursor to same position on previous/next line       | `Shift+Up/Down`    | `Shift+Up/Down`  |
+
+### General themes
+
+- `Ctrl` (Windows) and `Option` (Mac) allow **word** navigation
+- `Alt` (Windows) and `Command` (Mac) allow **line** navigation
+
+Combine the above ideas with:
+
+- `Shift`: to highlight words (useful for copying and pasting)
+- `Backspace` and `Delete`: to delete
+
+
+
+## RStudio keyboard shortcuts
+
+To view all of RStudio's keyboard shortcuts, navigate to:
+
+- Help > Keyboard Shortcuts Help
+
+You can also customize these shortcuts:
+
+- Tools > Modify Keyboard Shortcuts...
+
+Below are (IMO) the most useful RStudio keyboard shortcuts.
+
+### Tab completion
+
+Type part of a function or object name (in the Editor or Console) and then hit Tab. A menu of autocomplete options will popup. Select your choice with arrow keys and hit Tab or Enter. (e.g., Type `ggp` and hit Tab.) Tab completion also works for function arguments.
+
+### Working in source files
+
+| Action                                     | Windows <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" width="15" height="15" alt="Windows free icon">             | Mac <img src="   https://cdn-icons-png.flaticon.com/512/0/747.png " width="15" height="15" alt="Apple free icon">                   |
+|:----------------------------------------|:----------------------|:-----------------------|
+| Insert code chunk                             | `Ctrl+Alt+I`          | `Option+Command+I`     |
+| Insert pipe operator (`%>%`)                  | `Ctrl+Shift+M`        | `Command+Shift+M`      |
+| Insert assignment operator (`<-`)             | `Alt+-`               | `Option+-`             |
+| Run current code chunk                        | `Ctrl+Shift+Enter`    | `Command+Shift+Return` |
+| Run current line/currently selected lines     | `Ctrl+Enter`          | `Command+Return`       |
+| (Un)comment current line/currently selected lines | `Ctrl+Shift+C`        | `Command+Shift+C`       |
+
+Notes:
+
+- On my Mac, I like to change the "Insert assignment operator" shortcut to `Command+,` (This overrides the shortcut for pulling up RStudio's options, but I don't look at those options often anyway.)
+- When running a single line of code, your cursor can be anywhere on the line--it doesn't need to be all the way at the beginning or end.
+- When running code that is selected across multiple lines, exactly what is selected is run. If you want to run part of a line, select just that part. If you want to run multiple whole lines, select all those lines in their entirety.
+- When commenting/uncommenting lines, you don't need to have the whole line fully selected. Having just part of a line selected suffices.
+
+
+
+### Working in the Console
+
+While you may be used to writing all of your code in code chunks within a document, it is often useful to run code interactively in the Console as "scratch work." You'll often find that when testing out code, trying it out in the Console keeps your code document clean.
+
+| Action                                     | Windows <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" width="15" height="15" alt="Windows free icon">             | Mac <img src="   https://cdn-icons-png.flaticon.com/512/0/747.png " width="15" height="15" alt="Apple free icon">                   |
+|:----------------------------------------|:----------------------|:----------------------|
+| Move cursor to the Console              | `Ctrl+2`              | `Ctrl+2`              |
+| Cycle through previous commands         | `Up/Down`             | `Up/Down`             |
+| Show pop up of command history          | `Ctrl+Up`             | `Command+Up`          |
+| Interrupt currently executing command   | `Esc`                 | `Esc`                 |
+
+You can pull up the documentation (help page) for a function by entering `?function_name` in the Console.

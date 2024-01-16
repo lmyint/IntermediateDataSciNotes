@@ -1,0 +1,3 @@
+# Preface {.unnumbered}
+
+This book contains course notes for STAT/COMP 212: Intermediate Data Science at Macalester College.

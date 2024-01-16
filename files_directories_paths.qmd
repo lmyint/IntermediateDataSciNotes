@@ -1,0 +1,74 @@
+# File organization, directory structure, and navigation
+
+## Change the default file download location for your internet browser
+
+- Generally by default, internet browsers automatically save all files to the `Downloads` folder on your computer. This does not encourage good file organization practices. You need to change this option so that your browser asks you where to save each file before downloading it.
+- This [page](https://www.online-tech-tips.com/computer-tips/change-default-download-folder-location-on-any-web-browser/) has information on how to do this for the most common browsers.
+
+## Folder/directory structure
+
+Another word for a computer folder is a **directory**.
+
+When working on any data science project, I recommend setting up the directory structure below. Sub-bullets indicate folders that are inside other folders.
+
+- `Documents` (This should be some place you can find *easily* through your Finder (Mac) or File Explorer (Windows).)
+    - `descriptive_project_name`
+        - `code`
+            - `raw`: For messy code that you're actively working on
+            - `clean`: For code that you have cleaned up, documented, organized, and tested to run as expected
+        - `data`
+            - `raw`: Original data that hasn't been cleaned
+            - `clean`: Any non-original data that has been processed in some way
+        - `results`
+            - `figures`: Plots that will be used in communicating your project should go here. (Using screenshots of output in RStudio is not a good practice.)
+            - `tables`: Any sort of plain text file results (e.g., CSVs)
+
+From this point onward, we will use a simplified version of this directory structure for all of our class activities.
+
+
+    
+## File paths
+
+In a code file, when you read in data from a source on your computer, you need to specify the **file path** correctly. The file path is a text string that tells you how to get from your code file to the data. There are two types of paths: absolute and relative.
+
+**Absolute file paths** start at the "root" directory in a computer system. Examples:
+
+- Mac: `/Users/lesliemyint/Desktop/teaching/STAT212/2023_fall/class_activities/advanced_maps/us_states_hexgrid.geojson`
+    - On a Mac the tilde `~` in a file path refers to the "Home" directory, which is `/Users/lesliemyint`. In this case, the path becomes `~/Desktop/teaching/STAT212/2023_fall/class_activities/advanced_maps/us_states_hexgrid.geojson`
+- Windows: `C:/Users/lesliemyint/Documents/teaching/STAT212/2023_fall/class_activities/advanced_maps/us_states_hexgrid.geojson`
+    - Note: Windows uses both `/` (forward slash) and `\` (backward slash) to separate folders in a file path.
+
+<br>
+
+**Relative file paths** start wherever you are right now (the **working directory (WD)**). The WD when you're working in a code file may be different from the working directory in the Console.
+
+*Directory setup 1: Data is in same folder as code file*
+
+- `some_folder`
+    - `your_code_file.qmd`
+    - `data.csv`
+    
+There are two options for the relative path:
+
+- `./data.csv` (The `./` refers to the current working directory.)
+- `data.csv`
+
+*Directory setup 2: Data is within a subfolder called `data`*
+
+- `some_folder`
+    - `your_code_file.qmd`
+    - `data`
+        - `data.csv`
+
+The relative path would be `data/data.csv`. (Note: `./data/data.csv` would also work.)
+
+*Directory setup 3: Need to go to a "parent" folder first to get to the data*
+
+- `some_folder`
+    - `data.csv`
+    - `code`
+        - `your_code_file.qmd`
+
+To go "up" a folder in a relative path we use `../`.
+
+The relative path here would be `../data.csv`.

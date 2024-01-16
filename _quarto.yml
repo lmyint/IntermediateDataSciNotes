@@ -1,0 +1,22 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Intermediate Data Science Notes"
+  author: "Leslie Myint"
+  date: "2024"
+  chapters:
+    - index.qmd
+    - keyboard.qmd
+    - files_directories_paths.qmd
+
+bibliography: references.bib
+
+# Themes to try: yeti, cosmo, journal, minty
+
+format:
+  html:
+    theme: journal
+  pdf:
+    documentclass: scrreprt
